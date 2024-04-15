@@ -16,5 +16,6 @@ public class TaskStateEntity {
     int ordinal;
     Instant createdAt = Instant.now();
     @OneToMany
-List<TaskEntity> taskEntityList = new ArrayList<>();
+    @JoinColumn(name = "task_state_id", referencedColumnName = "id")
+    List<TaskEntity> taskEntityList = new ArrayList<>();
 }
