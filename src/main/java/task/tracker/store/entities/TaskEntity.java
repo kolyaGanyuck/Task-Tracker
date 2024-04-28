@@ -18,7 +18,6 @@ import java.time.Instant;
 public class TaskEntity {
     @Id
     Long id;
-    @Column(unique = true)
     String name;
     @Builder.Default
     Instant createdAt = Instant.now();

@@ -19,16 +19,22 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TaskStateDto {
 
-        @NonNull
-        Long id;
-        @NonNull
-        String name;
-        @NonNull
-        int ordinal;
-        @NonNull
-        @JsonProperty("created_at")
-        Instant createdAt;
+    @NonNull
+    Long id;
 
+    @NonNull
+    String name;
 
+    @JsonProperty("left_task_state_id")
+    Long leftTaskStateId;
 
+    @JsonProperty("right_task_state_id")
+    Long rightTaskStateId;
+
+    @NonNull
+    @JsonProperty("created_at")
+    Instant createdAt;
+
+    @NonNull
+    List<TaskDto> tasks;
 }

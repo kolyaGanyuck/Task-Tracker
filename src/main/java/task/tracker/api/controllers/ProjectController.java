@@ -60,7 +60,7 @@ public class ProjectController {
         boolean isCreate = !optionalProjectId.isPresent();
 
         if (isCreate && !optionalProjectName.isPresent()) {
-            throw new BadRequestException("Project name c   an't be empty.");
+            throw new BadRequestException("Project name " + optionalProjectName + "  can't be empty.");
         }
 
         final ProjectEntity project = optionalProjectId

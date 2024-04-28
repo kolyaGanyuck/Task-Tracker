@@ -28,6 +28,6 @@ public class ProjectEntity {
     Instant updatedAt = Instant.now();
     @OneToMany
     @JoinColumn(name = "project_id", referencedColumnName = "id")
-    List<TaskStateEntity> taskStateEntityList = new ArrayList<>();
+    List<TaskStateEntity> taskStates = new ArrayList<>();
 
 }
